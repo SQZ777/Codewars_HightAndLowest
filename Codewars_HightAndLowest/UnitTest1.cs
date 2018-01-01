@@ -1,3 +1,4 @@
+using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Codewars_HightAndLowest
@@ -8,13 +9,13 @@ namespace Codewars_HightAndLowest
         [TestMethod]
         public void Input_1_Should_Be_1()
         {
-            Assert.AreEqual("1",Kata.FindHigh("1"));
+            Assert.AreEqual("1", Kata.FindHigh("1"));
         }
 
         [TestMethod]
         public void Input_12_Should_Be_2()
         {
-            Assert.AreEqual("2",Kata.FindHigh("1 2"));
+            Assert.AreEqual("2", Kata.FindHigh("1 2"));
         }
 
     }
@@ -23,7 +24,8 @@ namespace Codewars_HightAndLowest
     {
         public static string FindHigh(string s)
         {
-            return s;
+            var sArray = s.Split(' ');
+            return sArray.Max();
         }
     }
 }
