@@ -10,13 +10,20 @@ namespace Codewars_HightAndLowest
         {
             Assert.AreEqual("1",Kata.FindHigh("1"));
         }
+
+        [TestMethod]
+        public void Input_12_Should_Be_2()
+        {
+            Assert.AreEqual("2",Kata.FindHigh("1 2"));
+        }
+
     }
 
     public class Kata
     {
         public static string FindHigh(string s)
         {
-            throw new System.NotImplementedException();
+            return s;
         }
     }
 }
