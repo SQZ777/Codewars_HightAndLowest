@@ -7,15 +7,21 @@ namespace Codewars_HightAndLowest
     public class UnitTest1
     {
         [TestMethod]
-        public void Input_1_Should_Be_1()
+        public void FindHigh_Input_1_Should_Be_1()
         {
             Assert.AreEqual("1", Kata.FindHigh("1"));
         }
 
         [TestMethod]
-        public void Input_12_Should_Be_2()
+        public void FindHigh_Input_12_Should_Be_2()
         {
             Assert.AreEqual("2", Kata.FindHigh("1 2"));
+        }
+
+        [TestMethod]
+        public void FindLowest_Input_12_Should_Be_1()
+        {
+            Assert.AreEqual("1",Kata.FindLow("1 2"));
         }
 
     }
@@ -24,8 +30,12 @@ namespace Codewars_HightAndLowest
     {
         public static string FindHigh(string s)
         {
-            var sArray = s.Split(' ');
-            return sArray.Max();
+            return s.Split(' ').Max();
+        }
+
+        public static string FindLow(string s)
+        {
+            return s.Split().Min();
         }
     }
 }
