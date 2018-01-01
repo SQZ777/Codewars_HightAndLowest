@@ -36,7 +36,13 @@ namespace Codewars_HightAndLowest
         {
             Assert.AreEqual("3 -2", Kata.HighAndLow("1 -2 3"));
         }
-        
+
+        [TestMethod]
+        public void Input_f1f2f3_Should_Be_f1f3()
+        {
+            Assert.AreEqual("-1 -3",Kata.HighAndLow("-1 -2 -3"));
+        }
+
     }
 
     public class Kata
