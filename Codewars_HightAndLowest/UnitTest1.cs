@@ -1,5 +1,3 @@
-using System;
-using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Codewars_HightAndLowest
@@ -43,22 +41,5 @@ namespace Codewars_HightAndLowest
             Assert.AreEqual("-1 -3",Kata.HighAndLow("-1 -2 -3"));
         }
 
-    }
-
-    public class Kata
-    {
-        public static string FindHigh(string s)
-        {
-            return Array.ConvertAll(s.Split(), Convert.ToInt32).Max().ToString();
-        }
-
-        public static string FindLow(string s)
-        {
-            return Array.ConvertAll(s.Split(), Convert.ToInt32).Min().ToString();
-        }
-        public static string HighAndLow(string s)
-        {
-            return FindHigh(s) + " " + FindLow(s);
-        }
     }
 }
