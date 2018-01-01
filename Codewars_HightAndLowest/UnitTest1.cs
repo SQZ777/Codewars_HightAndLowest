@@ -6,8 +6,17 @@ namespace Codewars_HightAndLowest
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod1()
+        public void Input_1_Should_Be_1()
         {
+            Assert.AreEqual("1",Kata.FindHigh("1"));
+        }
+    }
+
+    public class Kata
+    {
+        public static string FindHigh(string s)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }
